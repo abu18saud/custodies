@@ -44,9 +44,25 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
+            "DevExpress.Data": {
+              "target": "Package",
+              "version": "[21.1.5, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.12.0, )"
+            },
+            "System.Composition.AttributedModel": {
+              "target": "Package",
+              "version": "[6.0.0-preview.7.21377.19, )"
             }
           },
           "imports": [

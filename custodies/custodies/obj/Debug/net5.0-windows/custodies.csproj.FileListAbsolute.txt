@@ -6,7 +6,6 @@ C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\bin\Deb
 C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\bin\Debug\net5.0-windows\ref\custodies.dll
 C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\bin\Debug\net5.0-windows\custodies.pdb
 C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
-C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\obj\Debug\net5.0-windows\custodies.csproj.AssemblyReference.cache
 C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\obj\Debug\net5.0-windows\custodies.Form1.resources
 C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\obj\Debug\net5.0-windows\custodies.csproj.GenerateResource.cache
 C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\obj\Debug\net5.0-windows\custodies.GeneratedMSBuildEditorConfig.editorconfig
@@ -18,3 +17,9 @@ C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\obj\Deb
 C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\obj\Debug\net5.0-windows\ref\custodies.dll
 C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\obj\Debug\net5.0-windows\custodies.pdb
 C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\obj\Debug\net5.0-windows\custodies.genruntimeconfig.cache
+C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\bin\Debug\net5.0-windows\System.Net.Http.Formatting.dll
+C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\bin\Debug\net5.0-windows\Newtonsoft.Json.Bson.dll
+C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\bin\Debug\net5.0-windows\DevExpress.Data.v21.1.dll
+C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\bin\Debug\net5.0-windows\RestSharp.dll
+C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\bin\Debug\net5.0-windows\System.Composition.AttributedModel.dll
+C:\Users\Abdullah Alsalem\Documents\GitHub\custodies\custodies\custodies\obj\Debug\net5.0-windows\custodies.csproj.AssemblyReference.cache

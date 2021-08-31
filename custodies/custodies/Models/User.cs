@@ -8,7 +8,8 @@ namespace custodies.Models
 {
     class User
     {
-        public string userName { get; set; }
+        public string service { get; set; }
+        public string username { get; set; }
         public string password { get; set; }
         public string dispName { get; set; }
         public string email { get; set; }
@@ -16,6 +17,8 @@ namespace custodies.Models
         public DateTime lastLogin { get; set; }
         public DateTime lastPasswordReseted { get; set; }
         public DateTime regDate { get; set; }
+        public int duration { get; set; }
+        public string refresh_timeout { get; set; }
         /**
         * The number of times the user has requested a password reset.
         * 
@@ -62,8 +65,12 @@ namespace custodies.Models
         }
         public string getUserName() 
         {
-            return this.userName;
+            return this.username;
         }
+
+
+
+
         //public string[] hasPrivilege(int privilegeId)
         //{
         //    foreach ( this->userPrivileges) {

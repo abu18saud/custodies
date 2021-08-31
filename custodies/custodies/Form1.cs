@@ -11,7 +11,9 @@ using System.Net;
 //use newtonsoft to convert json to c# objects.
 using Newtonsoft.Json.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using custodies.Models;
+using RestSharp;
 
 namespace custodies
 {
@@ -23,44 +25,62 @@ namespace custodies
             InitializeComponent();
         }
 
-        async void login()
+        void Get()
         {
-            string container = string.Empty;
-            //Define your baseUrl
-            string baseUrl = "https://testing3.alyaseenagri.com/AuthAPI/login";
-            //Have your using statements within a try/catch block
-            try
-            {
-                //We will now define your HttpClient with your first using statement which will use a IDisposable.
-                using (HttpClient client = new HttpClient())
-                {
-                    //In the next using statement you will initiate the Get Request, use the await keyword so it will execute the using statement in order.
-                    using (HttpResponseMessage res = await client.PostAsync(baseUrl))
-                    {
-                        //Then get the content from the response in the next using statement, then within it you will get the data, and convert it to a c# object.
-                        using (var ctx = new User())
-                        {
-                            ctx = new User() { userName = "", password = "" };
-
-                            ctx.SaveChanges();
-                        }
-
-                        MessageBox.Show("OK");
-                    }
-                }
-            }
-            catch (Exception exception)
-            {
-                container += "Exception Hit------------ \n";
-                container += exception;
-            }
-
-            MessageBox.Show(container);
+            //Source from:  https://youtu.be/KTr3zDDqSYg
+            string url = "https://testing3.alyaseenagri.com/AuthAPI/login/";
+            var client = new RestClient(url);
+            var request = new RestRequest();
+            request.AddParameter("id", "6");
+            var respose = client.Get(request);
+            MessageBox.Show(respose.Content.ToString());
         }
+
+        void Post()
+        {
+            //Source from:  https://youtu.be/fVf6wNnUSPc
+            string url = "https://jsonplaceholder.typicode.com/posts/";
+            var client = new RestClient(url);
+            var request = new RestRequest();
+            var body = new post() { body = "This is the test body", title = "test post request", userId = 2 };
+            request.AddJsonBody(body);
+            var response = client.Post(request);
+
+            MessageBox.Show(response.StatusCode.ToString() + "          " + response.Content.ToString());
+        }
+
+        //            xhr.send('username=AdminX&password=123456&duration=5&refresh-timeout=true')
+        void PostLogin()
+        {
+
+
+            //Source from:  https://youtu.be/fVf6wNnUSPc
+            string url = "https://testing3.alyaseenagri.com/AuthAPI/login/";
+            var client = new RestClient(url);
+            var request = new RestRequest();
+            var body = new User() { username = "AdminX", password = "123456", duration = 5, service = "login" };
+
+
+            Parameter p = (Parameter)body;
+            
+            request.AddHeader("content-type", "application/x-www-form-urlencoded");
+            //request.AddParameter("username", "AdminX");
+            //request.AddParameter("password", "123456");
+            //request.AddParameter("duration", 10);
+            request.AddParameter(body);
+                var response = client.Post(request);
+
+            MessageBox.Show(response.StatusCode.ToString() + "          " + response.Content.ToString());
+        }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            members();
+            //User user = new User();
+            //user.userName = textBox1.Text;
+            //user.password = textBox2.Text;
+            PostLogin();
+            //Get();
         }
     }
 }
